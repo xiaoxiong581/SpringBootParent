@@ -11,8 +11,7 @@
         <dependencySet>
             <outputDirectory>SpringBoot/lib</outputDirectory>
             <useProjectArtifact>false</useProjectArtifact>
-            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}-${artifact
-            .extention}
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}
             </outputFileNameMapping>
             <unpack>false</unpack>
         </dependencySet>
