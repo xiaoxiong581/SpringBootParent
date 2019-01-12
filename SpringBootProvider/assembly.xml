@@ -1,0 +1,51 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+    <id>assembly</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>SpringBoot/lib</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}-${artifact
+            .extention}
+            </outputFileNameMapping>
+            <unpack>false</unpack>
+        </dependencySet>
+    </dependencySets>
+
+    <fileSets>
+        <fileSet>
+            <outputDirectory>SpringBoot/lib</outputDirectory>
+            <directory>${project.build.directory}</directory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+            <excludes>
+                <exclude>*jar-with-dependencies*</exclude>
+                <exclude>*sources*</exclude>
+            </excludes>
+        </fileSet>
+
+        <fileSet>
+            <outputDirectory>SpringBoot/</outputDirectory>
+            <directory>script</directory>
+            <includes>
+                <include>*.sh</include>
+            </includes>
+            <fileMode>0755</fileMode>
+        </fileSet>
+
+        <fileSet>
+            <outputDirectory>SpringBoot/</outputDirectory>
+            <directory>src/main/resources</directory>
+            <excludes>
+                <exclude>META-INF/**</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+</assembly>
