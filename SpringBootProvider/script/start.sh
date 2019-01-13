@@ -10,5 +10,4 @@ JAVA_OPTS="$JAVA_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,a
 JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=$envProfile";
 #JAVA_OPTS="$JAVA_OPTS -javaagent:lib/aspectjweaver-1.8.13.jar";
 
-java $JAVA_OPTS com.yzx.xiaoxiong581.springbootprovider.SpringBootProvierMain >> /var/log/xiaoxiong581/SpringBoot/out
-.log 2>&1 &
+java $JAVA_OPTS com.yzx.xiaoxiong581.springbootprovider.SpringBootProvierMain >> /var/log/xiaoxiong581/SpringBoot/out.log 2>&1 &
