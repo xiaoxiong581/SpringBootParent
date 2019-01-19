@@ -1,0 +1,9 @@
+springboot:
+  image: xiaoxiong581/springboot:0.0.1-snapshot
+  ports:
+  - "19080:19080"
+  - "19081:19081"
+  volumes:
+  - "/var/log/xiaoxiong581/SpringBoot:/var/log/xiaoxiong581/SpringBoot"
+  container_name: springboot
+  restart: always

@@ -34,7 +34,8 @@
             <outputDirectory>SpringBoot/</outputDirectory>
             <directory>script</directory>
             <includes>
-                <include>*.sh</include>
+                <include>start.sh</include>
+                <include>stop.sh</include>
             </includes>
             <fileMode>0755</fileMode>
         </fileSet>
