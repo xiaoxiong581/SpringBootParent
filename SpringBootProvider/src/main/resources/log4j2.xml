@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration status="WARN" monitorInterval="30">
     <appenders>
-        <console name="Console" target="SYSTEM_OUT">
+        <console name="Console" target="SYSTEM_OUT" follow="true">
             <PatternLayout pattern="[%d{HH:mm:ss:SSS}][%p] - %l - %m%n"/>
         </console>
 
