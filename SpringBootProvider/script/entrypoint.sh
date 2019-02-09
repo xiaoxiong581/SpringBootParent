@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sh /opt/SpringBoot/start.sh && tail -F /var/log/xiaoxiong581/SpringBoot/out.log
+mkdir -p /var/log/xiaoxiong581/SpringBoot
+
+sh /opt/SpringBoot/start.sh > /var/log/xiaoxiong581/SpringBoot/init.log && tail -F /var/log/xiaoxiong581/SpringBoot/init.log
